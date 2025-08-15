@@ -1,4 +1,4 @@
-#Custom image build with lfs tooling. NECESSARY. It can also be a custom image in their registry that is specified in the deploy.image: key here
+#Custom image build with lfs tooling.
 build:
   lfs:
     context: custom-lfs

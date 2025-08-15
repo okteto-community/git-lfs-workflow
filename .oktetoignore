@@ -1,3 +1,3 @@
-# We are not synchronizing this because Okteto is taking care of this on the deploy.commands of the "git lfs pull"
-# This means developers working on the same repo with LFS do not need to download the LFS files, or even have it configured locally
+# We are not synchronizing this directory because Okteto is taking care of this under the deploy.commands with "git lfs pull"
+# This allows developers working on the same repo with LFS do not need to download the LFS files, or even have it configured locally
 .git/lfs
