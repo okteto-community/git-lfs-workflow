@@ -1,7 +1,7 @@
 #Custom image build with lfs tooling. NECESSARY. It can also be a custom image in their registry that is specified in the deploy.image: key here
 build:
   lfs:
-    context: lfs
+    context: custom-lfs
     dockerfile: Dockerfile
 
 
