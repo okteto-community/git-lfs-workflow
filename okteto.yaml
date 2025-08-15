@@ -1,0 +1,17 @@
+#Custom image build with lfs tooling. NECESSARY. It can also be a custom image in their registry that is specified in the deploy.image: key here
+build:
+  lfs:
+    context: lfs
+    dockerfile: Dockerfile
+
+
+#Since Okteto does not natively support Git LFS, we need to manually pull the LFS files with git lfs pull
+#After pulling the LFS files we are able to build the application image and deploy the application by executing okteto deploy
+deploy:
+  image: ${OKTETO_BUILD_LFS_IMAGE}
+  commands:
+    - command: |
+        ls -al
+        git lfs pull
+        ls -al
+        okteto deploy -f docker-compose.yaml
